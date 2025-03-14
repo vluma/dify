@@ -3,12 +3,11 @@ import { useTranslation } from 'react-i18next'
 import { Fragment, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { useContext, useContextSelector } from 'use-context-selector'
-import { RiAccountCircleLine, RiArrowDownSLine, RiArrowRightUpLine, RiBookOpenLine, RiGithubLine, RiInformation2Line, RiLogoutBoxRLine, RiMap2Line, RiSettings3Line, RiStarLine } from '@remixicon/react'
+import { RiAccountCircleLine, RiArrowDownSLine, RiArrowRightUpLine, RiBookOpenLine, RiInformation2Line, RiLogoutBoxRLine, RiSettings3Line } from '@remixicon/react'
 import Link from 'next/link'
 import { Menu, Transition } from '@headlessui/react'
 import Indicator from '../indicator'
 import AccountAbout from '../account-about'
-import GithubStar from '../github-star'
 import Support from './support'
 import Compliance from './compliance'
 import classNames from '@/utils/classnames'
@@ -17,8 +16,6 @@ import Avatar from '@/app/components/base/avatar'
 import { logout } from '@/service/common'
 import AppContext, { useAppContext } from '@/context/app-context'
 import { useModalContext } from '@/context/modal-context'
-import { LanguagesSupported } from '@/i18n/language'
-import { LicenseStatus } from '@/types/feature'
 import { IS_CLOUD_EDITION } from '@/config'
 
 export type IAppSelector = {
@@ -126,9 +123,7 @@ export default function AppSelector({ isMobile }: IAppSelector) {
                         className={classNames(itemClassName, 'group justify-between',
                           active && 'bg-state-base-hover',
                         )}
-                        href={
-                          locale !== LanguagesSupported[1] ? 'https://docs.dify.ai/' : `https://docs.dify.ai/v/${locale.toLowerCase()}/`
-                        }
+                        href="https://www.baidu.com"
                         target='_blank' rel='noopener noreferrer'>
                         <RiBookOpenLine className='shrink-0 size-4 text-text-tertiary' />
                         <div className='grow system-md-regular text-text-secondary px-1'>{t('common.userProfile.helpCenter')}</div>
@@ -139,33 +134,6 @@ export default function AppSelector({ isMobile }: IAppSelector) {
                     {IS_CLOUD_EDITION && isCurrentWorkspaceOwner && <Compliance />}
                   </div>
                   <div className='p-1'>
-                    <Menu.Item>
-                      {({ active }) => <Link
-                        className={classNames(itemClassName, 'group justify-between',
-                          active && 'bg-state-base-hover',
-                        )}
-                        href='https://roadmap.dify.ai'
-                        target='_blank' rel='noopener noreferrer'>
-                        <RiMap2Line className='shrink-0 size-4 text-text-tertiary' />
-                        <div className='grow system-md-regular text-text-secondary px-1'>{t('common.userProfile.roadmap')}</div>
-                        <RiArrowRightUpLine className='shrink-0 size-[14px] text-text-tertiary' />
-                      </Link>}
-                    </Menu.Item>
-                    {systemFeatures.license.status === LicenseStatus.NONE && <Menu.Item>
-                      {({ active }) => <Link
-                        className={classNames(itemClassName, 'group justify-between',
-                          active && 'bg-state-base-hover',
-                        )}
-                        href='https://github.com/langgenius/dify'
-                        target='_blank' rel='noopener noreferrer'>
-                        <RiGithubLine className='shrink-0 size-4 text-text-tertiary' />
-                        <div className='grow system-md-regular text-text-secondary px-1'>{t('common.userProfile.github')}</div>
-                        <div className='flex items-center gap-0.5 px-[5px] py-[3px] border border-divider-deep rounded-[5px] bg-components-badge-bg-dimm'>
-                          <RiStarLine className='shrink-0 size-3 text-text-tertiary' />
-                          <GithubStar className='system-2xs-medium-uppercase text-text-tertiary' />
-                        </div>
-                      </Link>}
-                    </Menu.Item>}
                     {
                       document?.body?.getAttribute('data-public-site-about') !== 'hide' && (
                         <Menu.Item>

@@ -2,7 +2,6 @@
 import { useMemo, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import type { Collection } from './types'
-import Marketplace from './marketplace'
 import cn from '@/utils/classnames'
 import { useTabSearchParams } from '@/hooks/use-tab-searchparams'
 import TabSliderNew from '@/app/components/base/tab-slider-new'
@@ -130,6 +129,7 @@ const ProviderList = () => {
           {!filteredCollectionList.length && activeTab === 'builtin' && (
             <Empty lightCard text={t('tools.noTools')} className='px-12 h-[224px]' />
           )}
+          {/* 市场工具已被隐藏
           {
             enable_marketplace && activeTab === 'builtin' && (
               <Marketplace
@@ -141,6 +141,7 @@ const ProviderList = () => {
               />
             )
           }
+          */}
         </div>
       </div>
       {currentProvider && !currentProvider.plugin_id && (
