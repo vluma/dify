@@ -1,19 +1,19 @@
 const translation = {
-  custom: '定制',
+  custom: '自定义',
   upgradeTip: {
     title: '升级您的计划',
     des: '升级您的计划来定制您的品牌。',
     prefix: '升级您的计划以',
-    suffix: '定制您的品牌。',
+    suffix: '自定义您的品牌。',
   },
   webapp: {
-    title: '定制 WebApp 品牌',
-    removeBrand: '移除 Powered by Dify',
+    title: '自定义 WebApp 品牌',
+    removeBrand: '移除 Powered by CogitoCore',
     changeLogo: '更改 Powered by Brand 图片',
     changeLogoTip: 'SVG 或 PNG 格式，最小尺寸为 40x40px',
   },
   app: {
-    title: '定制应用品牌',
+    title: '自定义应用品牌',
     changeLogoTip: 'SVG 或 PNG 格式，最小尺寸为 80x80px',
   },
   upload: '上传',
@@ -24,7 +24,7 @@ const translation = {
   restore: '恢复默认',
   customize: {
     contactUs: '联系我们',
-    prefix: '如需在 Dify 内自定义品牌图标，请',
+    prefix: '如需在 CogitoCore 内自定义品牌图标，请',
     suffix: '升级至企业版。',
   },
 }
