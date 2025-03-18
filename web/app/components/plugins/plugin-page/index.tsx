@@ -3,9 +3,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useContext } from 'use-context-selector'
-import Link from 'next/link'
 import {
-  RiBookOpenLine,
   RiDragDropLine,
   RiEqualizer2Line,
 } from '@remixicon/react'
@@ -37,7 +35,6 @@ import { sleep } from '@/utils'
 import { fetchBundleInfoFromMarketPlace, fetchManifestFromMarketPlace } from '@/service/plugins'
 import { marketplaceApiPrefix } from '@/config'
 import { SUPPORT_INSTALL_LOCAL_FILE_EXTENSIONS } from '@/config'
-import { LanguagesSupported } from '@/i18n/language'
 import I18n from '@/context/i18n'
 
 const PACKAGE_IDS_KEY = 'package-ids'
@@ -164,7 +161,7 @@ const PluginPage = ({
             />
           </div>
           <div className='flex shrink-0 items-center gap-1'>
-            {
+            {/* {
               activeTab === 'discover' && (
                 <>
                   <Link
@@ -182,7 +179,7 @@ const PluginPage = ({
                   <div className='mx-2 w-[1px] h-3.5 bg-divider-regular'></div>
                 </>
               )
-            }
+            } */}
             <PluginTasks />
             {canManagement && (
               <InstallPluginDropdown

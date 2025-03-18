@@ -60,7 +60,7 @@ export default function Support() {
                     <RiArrowRightUpLine className='shrink-0 size-[14px] text-text-tertiary' />
                   </a>}
                 </Menu.Item>}
-                <Menu.Item>
+                {false && <Menu.Item>
                   {({ active }) => <Link
                     className={cn(itemClassName, 'group justify-between',
                       active && 'bg-state-base-hover',
@@ -71,8 +71,8 @@ export default function Support() {
                     <div className='grow system-md-regular text-text-secondary px-1'>{t('common.userProfile.communityFeedback')}</div>
                     <RiArrowRightUpLine className='shrink-0 size-[14px] text-text-tertiary' />
                   </Link>}
-                </Menu.Item>
-                <Menu.Item>
+                </Menu.Item>}
+                {false && <Menu.Item>
                   {({ active }) => <Link
                     className={cn(itemClassName, 'group justify-between',
                       active && 'bg-state-base-hover',
@@ -83,7 +83,7 @@ export default function Support() {
                     <div className='grow system-md-regular text-text-secondary px-1'>{t('common.userProfile.community')}</div>
                     <RiArrowRightUpLine className='shrink-0 size-[14px] text-text-tertiary' />
                   </Link>}
-                </Menu.Item>
+                </Menu.Item>}
               </div>
             </Menu.Items>
           </Transition>

@@ -1,7 +1,6 @@
 'use client'
 import type { FC } from 'react'
 import React from 'react'
-import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline'
 import { useTranslation } from 'react-i18next'
 import { useContext } from 'use-context-selector'
 import type { AppMode } from '@/types/app'
@@ -9,7 +8,6 @@ import I18n from '@/context/i18n'
 import Button from '@/app/components/base/button'
 import Modal from '@/app/components/base/modal'
 import Tag from '@/app/components/base/tag'
-import { LanguagesSupported } from '@/i18n/language'
 
 type IShareLinkProps = {
   isShow: boolean
@@ -97,7 +95,7 @@ const CustomizeModal: FC<IShareLinkProps> = ({
     <div className='w-full mt-4 px-6 py-5 border-components-panel-border rounded-lg border-[0.5px]'>
       <Tag bordered={true} hideBg={true} className='text-text-accent-secondary border-text-accent-secondary uppercase'>{t(`${prefixCustomize}.way`)} 2</Tag>
       <p className='my-2 system-sm-medium text-text-secondary'>{t(`${prefixCustomize}.way2.name`)}</p>
-      <Button
+      {/* <Button
         className='mt-2'
         onClick={() =>
           window.open(
@@ -111,7 +109,7 @@ const CustomizeModal: FC<IShareLinkProps> = ({
       >
         <span className='text-sm text-text-secondary'>{t(`${prefixCustomize}.way2.operation`)}</span>
         <ArrowTopRightOnSquareIcon className='w-4 h-4 ml-1 text-text-secondary shrink-0' />
-      </Button>
+      </Button> */}
     </div>
   </Modal>
 }

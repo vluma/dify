@@ -5,7 +5,6 @@ import { useBoolean } from 'ahooks'
 import {
   RiAddLine,
   RiApps2AddLine,
-  RiBookOpenLine,
 } from '@remixicon/react'
 import EndpointModal from './endpoint-modal'
 import EndpointCard from './endpoint-card'
@@ -20,7 +19,6 @@ import {
   useInvalidateEndpointList,
 } from '@/service/use-endpoints'
 import type { PluginDetail } from '@/app/components/plugins/types'
-import { LanguagesSupported } from '@/i18n/language'
 import I18n from '@/context/i18n'
 import cn from '@/utils/classnames'
 
@@ -78,7 +76,7 @@ const EndpointList = ({ detail }: Props) => {
                   <RiApps2AddLine className='w-4 h-4 text-text-tertiary' />
                 </div>
                 <div className='text-text-tertiary system-xs-regular'>{t('plugin.detailPanel.endpointsTip')}</div>
-                <a
+                {/* <a
                   href={`https://docs.dify.ai/${locale === LanguagesSupported[1] ? 'v/zh-hans/' : ''}plugins/schema-definition/endpoint`}
                   target='_blank'
                   rel='noopener noreferrer'
@@ -87,7 +85,7 @@ const EndpointList = ({ detail }: Props) => {
                     <RiBookOpenLine className='w-3 h-3' />
                     {t('plugin.detailPanel.endpointsDocLink')}
                   </div>
-                </a>
+                </a> */}
               </div>
             }
           />

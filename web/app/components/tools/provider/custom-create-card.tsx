@@ -54,13 +54,13 @@ const Contribute = ({ onRefreshData }: Props) => {
               <div className='ml-3 text-sm font-semibold leading-5 text-text-primary group-hover:text-text-accent'>{t('tools.createCustomTool')}</div>
             </div>
           </div>
-          <div className='px-4 py-3 rounded-b-xl border-t-[0.5px] border-divider-regular text-text-tertiary hover:text-text-accent hover:bg-background-body'>
+          {false && <div className='px-4 py-3 rounded-b-xl border-t-[0.5px] border-divider-regular text-text-tertiary hover:text-text-accent hover:bg-background-body'>
             <a href={linkUrl} target='_blank' rel='noopener noreferrer' className='flex items-center space-x-1'>
               <BookOpen01 className='shrink-0 w-3 h-3' />
               <div className='grow leading-[18px] text-xs font-normal truncate' title={t('tools.customToolTip') || ''}>{t('tools.customToolTip')}</div>
               <ArrowUpRight className='shrink-0 w-3 h-3' />
             </a>
-          </div>
+          </div>}
         </div>
       )}
       {isShowEditCollectionToolModal && (
